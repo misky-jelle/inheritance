@@ -5,7 +5,7 @@ fun main(){
     println(car.calculateParkingFees(5))
     var bus=Bus("minibus","coach","yellow",54)
     println(bus.maxTripFare(150.50))
-    bus.calculateParkingFees(4)
+    println(bus.calculateParkingFees(4))
 }
 open class Car(var make:String, var model:String,var color:String,var capacity:Int) {
     fun carry(people: Int) {
@@ -34,9 +34,7 @@ class Bus(make:String, model:String,color:String,capacity:Int): Car(make,model,c
 
     }
     override fun calculateParkingFees(hours: Int): Int {
-        //return super.calculateParkingFees(hours)
         var product = hours * capacity
-        println(product)
         return(product)
 
     }
